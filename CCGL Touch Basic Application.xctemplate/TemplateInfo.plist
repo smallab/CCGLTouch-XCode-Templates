@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Nodes</key>
+	<array>
+		<string>main.m:main:UIApplicationMain</string>
+		<string>___PACKAGENAME___-Info.plist:iPhone</string>
+		<string>___PACKAGENAME___-Info.plist:NSMainNibFile</string>
+		<string>___PACKAGENAME___-Prefix.pch:objC:importFoundation</string>
+		<string>___PACKAGENAME___-Prefix.pch:Availability:iPhoneAvailability</string>
+        <string>../CCGLTouchCore/CCGLTouchAppDelegate.h</string>
+        <string>../CCGLTouchCore/CCGLTouchAppDelegate.mm</string>
+        <string>../CCGLTouchCore/CCGLTouchView.h</string>
+        <string>../CCGLTouchCore/CCGLTouchView.mm</string>
+        <string>../CCGLTouchCore/CCGLTouchViewController.h</string>
+        <string>../CCGLTouchCore/CCGLTouchViewController.mm</string>
+        <string>./MyAppDelegate.h</string>
+        <string>./MyAppDelegate.mm</string>
+        <string>./MyCinderGLView.h</string>
+        <string>./MyCinderGLView.mm</string>
+        <string>./MyViewController.h</string>
+        <string>./MyViewController.mm</string>
+        <string>MainWindow.xib</string>
+        <string>MyViewController.xib</string>
+	</array>
+	
+	
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>Frameworks</key>
+			<array>
+				<string>UIKit</string>
+				<string>Foundation</string>
+				<string>CoreGraphics</string>
+				<string>QuartzCore</string>
+				<string>OpenGLES</string>
+				<string>AudioToolbox</string>
+				<string>CoreVideo</string>
+				<string>AVFoundation</string>
+				<string>CoreMedia</string>
+				<string>CoreText</string>
+			</array>
+           <key>SharedSettings</key>
+            <dict>
+                <key>ARCHS</key>
+                <string>$(ARCHS_STANDARD_32_BIT)</string>
+                <key>GCC_VERSION</key>
+                <string>com.apple.compilers.llvmgcc42</string>
+                <key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+                <string>YES</string>
+                <key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+                <string>YES</string>
+                <key>HEADER_SEARCH_PATHS</key>
+                <string>$(CINDER_PATH)/include $(CINDER_PATH)/boost</string>
+                <key>USER_HEADER_SEARCH_PATHS</key>
+                <string>$(CINDER_PATH)/include</string>
+                <key>LIBRARY_SEARCH_PATHS</key>
+                <string>$(CINDER_PATH)/lib $(CINDER_PATH)/lib/ios $(CINDER_PATH)/lib/ios-sim</string>
+                <key>DEVICE_FAMILY</key>
+                <string>iPhone/iPad</string>
+                <key>CINDER_PATH</key>
+                <string>../..</string>
+            </dict>
+			<key>Configurations</key>
+			<dict>
+                <key>Debug</key>
+                <dict>
+                    <key>ONLY_ACTIVE_ARCH</key>
+                    <string>YES</string>
+                    <key>OTHER_LDFLAGS</key>
+                    <string>/usr/lib/libz.dylib $(CINDER_PATH)/lib/libcinder-iphone_d.a $(CINDER_PATH)/lib/libcinder-iphone-sim_d.a</string>
+                </dict>
+                <key>Release</key>
+                <dict>
+                    <key>DEBUG_INFORMATION_FORMAT</key>
+                    <string>dwarf-with-dsym</string>
+                    <key>OTHER_LDFLAGS</key>
+                    <string>/usr/lib/libz.dylib $(CINDER_PATH)/lib/libcinder-iphone.a $(CINDER_PATH)/lib/libcinder-iphone-sim.a</string>
+                </dict>
+            </dict>
+		</dict>
+	</array>
+	
+	
+	<key>Project</key>
+	<dict>
+		<key>Configurations</key>
+		<dict>
+			<key>Release</key>
+			<dict>
+				<key>OTHER_CFLAGS</key>
+				<string>-DNS_BLOCK_ASSERTIONS=1</string>
+			</dict>
+		</dict>
+		<key>SharedSettings</key>
+		<dict>
+			<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+			<string>iPhone Developer</string>
+		</dict>
+	</dict>
+	
+	
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Default</key>
+			<string>Universal</string>
+			<key>Description</key>
+			<string>What device family to create a project for.</string>
+			<key>Identifier</key>
+			<string>universalDeviceFamily</string>
+			<key>Name</key>
+			<string>Device Family</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Units</key>
+			<dict>
+				<key>Universal</key>
+				<dict>
+					<!--key>Definitions</key>
+					<dict>
+						<key>___PACKAGENAME___-Info.plist:NSMainNibFile</key>
+						<string>&lt;key&gt;NSMainNibFile&lt;/key&gt;
+&lt;string&gt;MainWindow_iPhone&lt;/string&gt;
+&lt;key&gt;NSMainNibFile~ipad&lt;/key&gt;
+&lt;string&gt;MainWindow_iPad&lt;/string&gt;</string>
+					</dict-->
+					<key>Nodes</key>
+					<array>
+						<string>___PACKAGENAME___-Info.plist:UISupportedInterfaceOrientations~iPhone</string>
+						<string>___PACKAGENAME___-Info.plist:UISupportedInterfaceOrientations~iPad</string>
+					</array>
+					<key>Project</key>
+					<dict>
+						<key>SharedSettings</key>
+						<dict>
+							<key>TARGETED_DEVICE_FAMILY</key>
+							<string>1,2</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>iPad</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>*:shouldAutorotateToInterfaceOrientation</key>
+						<string>- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
+</string>
+					</dict>
+					<key>Nodes</key>
+					<array>
+						<string>___PACKAGENAME___-Info.plist:UISupportedInterfaceOrientations~iPad</string>
+						<string>MainWindow.xib</string>
+					</array>
+					<key>Project</key>
+					<dict>
+						<key>SharedSettings</key>
+						<dict>
+							<key>ARCHS</key>
+							<string>$(ARCHS_UNIVERSAL_IPHONE_OS)</string>
+							<key>TARGETED_DEVICE_FAMILY</key>
+							<string>2</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>iPhone</key>
+				<dict>
+					<key>Nodes</key>
+					<array>
+						<string>___PACKAGENAME___-Info.plist:UISupportedInterfaceOrientations~iPhone</string>
+						<string>MainWindow.xib</string>
+					</array>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+
+
+	<key>Concrete</key>
+	<true/>
+	
+	
+	<key>Description</key>
+    <string>This template provides a starting point for an app that uses Cinder from within a typical Cocoa Touch environment, using the UIKit on iPhone/iPad (more info at http://www.smallab.org/code/ccgl-touch/).</string>
+    
+    
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	
+	
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.objectiveCApplication</string>
+		<string>com.apple.dt.unit.iPhoneBase</string>
+	</array>
+	
+	
+	<key>Definitions</key>
+	<dict>
+		<key>../CCGLTouchCore/CCGLTouchAppDelegate.h</key>
+		<dict>
+			<key>Group</key>
+			<string>CCGLTouchCore</string>
+			<key>Path</key>
+			<string>CCGLTouchCore/CCGLTouchAppDelegate.h</string>
+		</dict>
+		<key>../CCGLTouchCore/CCGLTouchAppDelegate.mm</key>
+		<dict>
+			<key>Group</key>
+			<string>CCGLTouchCore</string>
+			<key>Path</key>
+			<string>CCGLTouchCore/CCGLTouchAppDelegate.mm</string>
+		</dict>
+		
+		<key>../CCGLTouchCore/CCGLTouchViewController.h</key>
+		<dict>
+			<key>Group</key>
+			<string>CCGLTouchCore</string>
+			<key>Path</key>
+			<string>CCGLTouchCore/CCGLTouchViewController.h</string>
+		</dict>
+		<key>../CCGLTouchCore/CCGLTouchViewController.mm</key>
+		<dict>
+			<key>Group</key>
+			<string>CCGLTouchCore</string>
+			<key>Path</key>
+			<string>CCGLTouchCore/CCGLTouchViewController.mm</string>
+		</dict>
+		
+		<key>../CCGLTouchCore/CCGLTouchView.h</key>
+		<dict>
+			<key>Group</key>
+			<string>CCGLTouchCore</string>
+			<key>Path</key>
+			<string>CCGLTouchCore/CCGLTouchView.h</string>
+		</dict>
+		<key>../CCGLTouchCore/CCGLTouchView.mm</key>
+		<dict>
+			<key>Group</key>
+			<string>CCGLTouchCore</string>
+			<key>Path</key>
+			<string>CCGLTouchCore/CCGLTouchView.mm</string>
+		</dict>
+		
+		<key>./MyAppDelegate.h</key>
+		<dict>
+			<key>Group</key>
+			<string>MyClasses</string>
+			<key>Path</key>
+			<string>MyAppDelegate.h</string>
+		</dict>
+		<key>./MyAppDelegate.mm</key>
+		<dict>
+			<key>Group</key>
+			<string>MyClasses</string>
+			<key>Path</key>
+			<string>MyAppDelegate.mm</string>
+		</dict>
+
+		<key>./MyViewController.h</key>
+		<dict>
+			<key>Group</key>
+			<string>MyClasses</string>
+			<key>Path</key>
+			<string>MyViewController.h</string>
+		</dict>
+		<key>./MyViewController.mm</key>
+		<dict>
+			<key>Group</key>
+			<string>MyClasses</string>
+			<key>Path</key>
+			<string>MyViewController.mm</string>
+		</dict>
+		
+		<key>./MyCinderGLView.h</key>
+		<dict>
+			<key>Group</key>
+			<string>MyClasses</string>
+			<key>Path</key>
+			<string>MyCinderGLView.h</string>
+		</dict>
+		<key>./MyCinderGLView.mm</key>
+		<dict>
+			<key>Group</key>
+			<string>MyClasses</string>
+			<key>Path</key>
+			<string>MyCinderGLView.mm</string>
+		</dict>
+		
+		<key>MainWindow.xib</key>
+		<dict>
+			<key>Group</key>
+			<string>MyAssets</string>
+			<key>Path</key>
+			<string>MainWindow.xib</string>
+		</dict>
+		<key>MyViewController.xib</key>
+		<dict>
+			<key>Group</key>
+			<string>MyAssets</string>
+			<key>Path</key>
+			<string>MyViewController.xib</string>
+		</dict>
+		<key>___PACKAGENAME___-Info.plist:NSMainNibFile</key>
+		<string>&lt;key&gt;NSMainNibFile&lt;/key&gt;
+&lt;string&gt;MainWindow&lt;/string&gt;</string>
+		<key>___PACKAGENAME___-Info.plist:iPhone</key>
+		<string>&lt;key&gt;CFBundleDisplayName&lt;/key&gt;
+&lt;string&gt;${PRODUCT_NAME}&lt;/string&gt;
+&lt;key&gt;CFBundleVersion&lt;/key&gt;
+&lt;string&gt;1.0&lt;/string&gt;
+&lt;key&gt;CFBundleShortVersionString&lt;/key&gt;
+&lt;string&gt;1.0&lt;/string&gt;
+&lt;key&gt;LSRequiresIPhoneOS&lt;/key&gt;
+&lt;true/&gt;
+&lt;key&gt;UIApplicationExitsOnSuspend&lt;/key&gt;
+&lt;true/&gt;</string>
+		<key>___PACKAGENAME___-Prefix.pch:Availability:iPhoneAvailability</key>
+		<string>#import &lt;Availability.h&gt;
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iPhone SDK 3.0 and later."
+#endif
+</string>
+		<key>main.m:main:UIApplicationMain</key>
+		<string>NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+int retVal = UIApplicationMain(argc, argv, nil, nil);
+[pool release];
+return retVal;
+</string>
+	</dict>
+	
+	
+	<key>Identifier</key>
+	<string>org.smallab.ccglTouchBasicApplication</string>
+</dict>
+</plist>
