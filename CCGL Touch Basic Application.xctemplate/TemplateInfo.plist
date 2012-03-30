@@ -306,6 +306,7 @@
 			<key>Path</key>
 			<string>MyViewController.xib</string>
 		</dict>
+        
 		<key>___PACKAGENAME___-Info.plist:NSMainNibFile</key>
 		<string>&lt;key&gt;NSMainNibFile&lt;/key&gt;
 &lt;string&gt;MainWindow&lt;/string&gt;</string>
