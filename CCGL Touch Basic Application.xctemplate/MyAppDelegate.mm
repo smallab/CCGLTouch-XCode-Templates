@@ -17,14 +17,14 @@
 - (void)launch
 {    
 	// our CCGLTouchView being added as a subview
-	MyCinderGLView *aView = [[MyCinderGLView alloc] init];
-	glView = aView;
+	MyCCGLView *aView = [[MyCCGLView alloc] init];
+	ccglView = aView;
 	[aView release];
-	glView = [[MyCinderGLView alloc] initWithFrame:CGRectMake(0.0, 0.0, (float)[UIScreen mainScreen].bounds.size.width, (float)[UIScreen mainScreen].bounds.size.height-70.0)];
-	[[viewController view] addSubview:glView];
+	ccglView = [[MyCCGLView alloc] initWithFrame:CGRectMake(0.0, 0.0, (float)[UIScreen mainScreen].bounds.size.width, (float)[UIScreen mainScreen].bounds.size.height-70.0)];
+	[[viewController view] addSubview:ccglView];
 	
     // set our view controller's prop that will hold a pointer to our newly created CCGLTouchView
-    [viewController setGLView:glView];
+    [viewController setCCGLView:ccglView];
 
     
     // viewController as the root view for our window
@@ -34,7 +34,7 @@
 - (void)dealloc
 {
     [viewController release];
-    [glView release];
+    [ccglView release];
     [super dealloc];
 }
 

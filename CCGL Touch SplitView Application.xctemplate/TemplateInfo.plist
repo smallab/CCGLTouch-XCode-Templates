@@ -17,8 +17,8 @@
         <string>../CCGLTouchCore/CCGLTouchViewController.mm</string>
         <string>./MyAppDelegate.h</string>
         <string>./MyAppDelegate.mm</string>
-        <string>./MyCinderGLView.h</string>
-        <string>./MyCinderGLView.mm</string>
+        <string>./MyCCGLView.h</string>
+        <string>./MyCCGLView.mm</string>
         <string>./MyRootViewController.h</string>
         <string>./MyRootViewController.mm</string>
         <string>./MyDetailViewController.h</string>
@@ -63,7 +63,7 @@
                 <key>LIBRARY_SEARCH_PATHS</key>
                 <string>$(CINDER_PATH)/lib $(CINDER_PATH)/lib/ios $(CINDER_PATH)/lib/ios-sim</string>
                 <key>DEVICE_FAMILY</key>
-                <string>iPad</string>
+                <string>iPhone/iPad</string>
                 <key>CINDER_PATH</key>
                 <string>../..</string>
             </dict>
@@ -106,9 +106,56 @@
 	</dict>
 	
 	
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Default</key>
+			<string>Universal</string>
+			<key>Description</key>
+			<string>What device family to create a project for.</string>
+			<key>Identifier</key>
+			<string>universalDeviceFamily</string>
+			<key>Name</key>
+			<string>Device Family</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Units</key>
+			<dict>
+				<key>iPad</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>*:shouldAutorotateToInterfaceOrientation</key>
+						<string>- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
+</string>
+					</dict>
+					<key>Nodes</key>
+					<array>
+						<string>___PACKAGENAME___-Info.plist:UISupportedInterfaceOrientations~iPad</string>
+						<string>MainWindow.xib</string>
+					</array>
+					<key>Project</key>
+					<dict>
+						<key>SharedSettings</key>
+						<dict>
+							<key>ARCHS</key>
+							<string>$(ARCHS_UNIVERSAL_IPHONE_OS)</string>
+							<key>TARGETED_DEVICE_FAMILY</key>
+							<string>2</string>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+
+
 	<key>Concrete</key>
 	<true/>
-	
+    
 	
 	<key>Description</key>
     <string>This template provides a starting point for an iPad app that uses Cinder from within a typical Cocoa Touch environment in a Split-View configuration (more info at http://www.smallab.org/code/ccgl-touch/).</string>
@@ -121,7 +168,7 @@
 	<key>Ancestors</key>
 	<array>
 		<string>com.apple.dt.unit.objectiveCApplication</string>
-		<string>com.apple.dt.unit.iPadBase</string>
+		<string>com.apple.dt.unit.iPhoneBase</string>
 	</array>
 	
 	
@@ -232,19 +279,19 @@
 			<string>MyTableViewCell.mm</string>
 		</dict>
 		
-		<key>./MyCinderGLView.h</key>
+		<key>./MyCCGLView.h</key>
 		<dict>
 			<key>Group</key>
 			<string>MyClasses</string>
 			<key>Path</key>
-			<string>MyCinderGLView.h</string>
+			<string>MyCCGLView.h</string>
 		</dict>
-		<key>./MyCinderGLView.mm</key>
+		<key>./MyCCGLView.mm</key>
 		<dict>
 			<key>Group</key>
 			<string>MyClasses</string>
 			<key>Path</key>
-			<string>MyCinderGLView.mm</string>
+			<string>MyCCGLView.mm</string>
 		</dict>
 		
 		<key>MainWindow.xib</key>

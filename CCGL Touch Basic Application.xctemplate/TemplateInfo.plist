@@ -17,8 +17,8 @@
         <string>../CCGLTouchCore/CCGLTouchViewController.mm</string>
         <string>./MyAppDelegate.h</string>
         <string>./MyAppDelegate.mm</string>
-        <string>./MyCinderGLView.h</string>
-        <string>./MyCinderGLView.mm</string>
+        <string>./MyCCGLView.h</string>
+        <string>./MyCCGLView.mm</string>
         <string>./MyViewController.h</string>
         <string>./MyViewController.mm</string>
         <string>MainWindow.xib</string>
@@ -277,19 +277,19 @@
 			<string>MyViewController.mm</string>
 		</dict>
 		
-		<key>./MyCinderGLView.h</key>
+		<key>./MyCCGLView.h</key>
 		<dict>
 			<key>Group</key>
 			<string>MyClasses</string>
 			<key>Path</key>
-			<string>MyCinderGLView.h</string>
+			<string>MyCCGLView.h</string>
 		</dict>
-		<key>./MyCinderGLView.mm</key>
+		<key>./MyCCGLView.mm</key>
 		<dict>
 			<key>Group</key>
 			<string>MyClasses</string>
 			<key>Path</key>
-			<string>MyCinderGLView.mm</string>
+			<string>MyCCGLView.mm</string>
 		</dict>
 		
 		<key>MainWindow.xib</key>
@@ -306,6 +306,7 @@
 			<key>Path</key>
 			<string>MyViewController.xib</string>
 		</dict>
+        
 		<key>___PACKAGENAME___-Info.plist:NSMainNibFile</key>
 		<string>&lt;key&gt;NSMainNibFile&lt;/key&gt;
 &lt;string&gt;MainWindow&lt;/string&gt;</string>

@@ -14,11 +14,11 @@
 #import "CCGLTouchAppDelegate.h"
 
 #import "MyViewController.h"
-#import "MyCinderGLView.h"
+#import "MyCCGLView.h"
 
 
 @interface MyAppDelegate : CCGLTouchAppDelegate {
-    MyCinderGLView *glView;
+    MyCCGLView *ccglView;
     IBOutlet MyViewController *viewController;
 }
 

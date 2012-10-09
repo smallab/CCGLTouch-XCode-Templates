@@ -1,5 +1,5 @@
 //
-//  MyCinderGLView.mm
+//  MyCCGLView.mm
 //  CCGLTouchBasic example
 //
 //  Created by Matthieu Savary on 09/09/11.
@@ -7,18 +7,30 @@
 //
 //  More info on the CCGLTouch project >> http://www.smallab.org/code/ccgl-touch/
 //  License & disclaimer >> see license.txt file included in the distribution package
+//  
+//  Latest revision on 10/06/12.
 //
 
-#import "MyCinderGLView.h"
+#import "MyCCGLView.h"
 
-@implementation MyCinderGLView
+@implementation MyCCGLView
 
 /**
- *	The superclass setup method
+ *	The superclass prepareSettings & setup method
  */
+
+- (void)prepareSettings
+{
+    [self enableAntiAliasing];
+    frameRate = 30;
+}
 
 - (void)setup
 {
+    // Comment the following line to simply override, if you want to not animate
+    // automatically, to change the default viewport, to not use CCGL's OpenGL
+    // default params... Check this method in the super class implementation for
+    //  more details on what happens.
     [super setup];
     
     // setup the camera
@@ -29,13 +41,12 @@
     mCubeSize = 10;
 }
 
-
-
 /**
  *  The superclass draw method
  */
 
-- (void)draw {
+- (void)draw
+{
 	// this pair of lines is the standard way to clear the screen in OpenGL
 	gl::clear( Color( 0.9f, 0.9f, 0.9f ), true );
 	glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
@@ -50,8 +61,6 @@
 	glPopMatrix();
 }
 
-
-
 /**
  *  incoming from controller
  */
@@ -60,7 +69,7 @@
 {
     mCubeSize = size * 30 + 10;
     
-    cout << "CubeSize : " << mCubeSize << endl;
+    console() << "mCubeSize: " << mCubeSize << endl;
 }
 
 @end

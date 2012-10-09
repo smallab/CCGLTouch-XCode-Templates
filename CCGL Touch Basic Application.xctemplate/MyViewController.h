@@ -10,13 +10,13 @@
 //
 
 #import "CCGLTouchViewController.h"
-#import "MyCinderGLView.h"
+#import "MyCCGLView.h"
 
 @interface MyViewController : CCGLTouchViewController {
-    MyCinderGLView *glView;
+    MyCCGLView *ccglView;
 }
 
-- (void)setGLView:(CCGLTouchView *)view;
+- (void)setCCGLView:(CCGLTouchView *)view;
 
 /**
  *  Cocoa UI methods

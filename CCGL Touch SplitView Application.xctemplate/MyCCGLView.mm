@@ -1,5 +1,5 @@
 //
-//  MyCinderGLView.mm
+//  MyCCGLView.mm
 //  CCGLTouchSplitView example
 //
 //  Created by Matthieu Savary on 09/09/11.
@@ -8,10 +8,12 @@
 //  More info on the CCGLTouch project >> http://www.smallab.org/code/ccgl-touch/
 //  License & disclaimer >> see license.txt file included in the distribution package
 //
+//  Latest revision on 10/06/12.
+//
 
-#import "MyCinderGLView.h"
+#import "MyCCGLView.h"
 
-@implementation MyCinderGLView
+@implementation MyCCGLView
 
 /**
  *	The superclass setup method

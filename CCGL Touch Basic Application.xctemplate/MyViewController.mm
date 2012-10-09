@@ -17,9 +17,9 @@
  *	setting glView(s) from the Delegate
  */
 
-- (void)setGLView:(MyCinderGLView *)view
+- (void)setCCGLView:(MyCCGLView *)view
 {
-    glView = view;
+    ccglView = view;
 }
 
 
@@ -29,7 +29,7 @@
 
 -(IBAction)listenToCubeSizeSlider:(id)sender {
     UISlider *slider = (UISlider *)sender;
-    [glView setCubeSize:(float)[slider value]];
+    [ccglView setCubeSize:(float)[slider value]];
 }
 
 @end
