@@ -5,9 +5,9 @@
 //  Created by Matthieu Savary on 09/09/11.
 //  Copyright (c) 2011 SMALLAB.ORG. All rights reserved.
 //
-//  More info on the CCGLTouch project >> http://www.smallab.org/code/ccgl-touch/
+//  More info on the CCGLTouch project >> http://cocoacid.org/ios/
 //  License & disclaimer >> see license.txt file included in the distribution package
-//  
+//
 //  Latest revision on 10/06/12.
 //
 
@@ -16,7 +16,7 @@
 @implementation MyCCGLView
 
 /**
- *	The superclass prepareSettings & setup method
+ *	The prepareSettings & setup method
  */
 
 - (void)prepareSettings
@@ -28,7 +28,7 @@
 - (void)setup
 {
     // Comment the following line to simply override, if you want to not animate
-    // automatically, to change the default viewport, to not use CCGL's OpenGL
+    // automatically, to change the default viewport, to not use CCGLTouch's OpenGLES
     // default params... Check this method in the super class implementation for
     //  more details on what happens.
     [super setup];
@@ -42,7 +42,7 @@
 }
 
 /**
- *  The superclass draw method
+ *  The draw method
  */
 
 - (void)draw

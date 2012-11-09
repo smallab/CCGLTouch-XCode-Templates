@@ -186,7 +186,7 @@
 	
 	
 	<key>Description</key>
-    <string>This template provides a starting point for an app that uses Cinder from within a typical Cocoa Touch environment, using the UIKit on iPhone/iPad (more info at http://www.smallab.org/code/ccgl-touch/).</string>
+    <string>This template provides a starting point for an app that uses Cinder from within a typical Cocoa Touch environment, using the UIKit on iPhone/iPad (more info at http://cocoacid.org/ios/).</string>
     
     
 	<key>Kind</key>

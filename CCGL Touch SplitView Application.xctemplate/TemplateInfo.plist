@@ -158,7 +158,7 @@
     
 	
 	<key>Description</key>
-    <string>This template provides a starting point for an iPad app that uses Cinder from within a typical Cocoa Touch environment in a Split-View configuration (more info at http://www.smallab.org/code/ccgl-touch/).</string>
+    <string>This template provides a starting point for an iPad app that uses Cinder from within a typical Cocoa Touch environment in a Split-View configuration (more info at http://cocoacid.org/ios/).</string>
     
     
 	<key>Kind</key>
