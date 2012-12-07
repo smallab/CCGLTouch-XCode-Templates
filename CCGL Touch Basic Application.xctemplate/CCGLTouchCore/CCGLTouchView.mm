@@ -356,6 +356,8 @@
 
 - (void)dealloc
 {
+    [super stopAnimation];
+    
     if ([EAGLContext currentContext] == context)
         [EAGLContext setCurrentContext:nil];
     [context release];
