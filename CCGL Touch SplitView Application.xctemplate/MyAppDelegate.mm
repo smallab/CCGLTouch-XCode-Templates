@@ -18,14 +18,12 @@
 
 - (void)launch
 {    
-	// OpenGL View
-	MyCCGLView *aView = [[MyCCGLView alloc] init];
-	ccglView = aView;
-	[aView release];
+	// our CCGLTouchView being added as a subview
 	ccglView = [[MyCCGLView alloc] initWithFrame:CGRectMake(0.0, 44.0, (float)[UIScreen mainScreen].bounds.size.width, (float)[UIScreen mainScreen].bounds.size.height-44.0)];//[UIScreen mainScreen].bounds];
 	[[detailViewController view] addSubview:ccglView];
+	[ccglView release];
 	
-    // set Detail View Controller's prop
+    // set our view controller's prop that will hold a pointer to our newly created CCGLTouchView
     [detailViewController setCCGLView:ccglView];
     
     
