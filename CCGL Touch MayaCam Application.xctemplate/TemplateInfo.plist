@@ -344,6 +344,6 @@ return retVal;
 	
 	
 	<key>Identifier</key>
-	<string>org.smallab.ccglTouchBasicApplication</string>
+	<string>org.smallab.ccglTouchMayaCamApplication</string>
 </dict>
 </plist>

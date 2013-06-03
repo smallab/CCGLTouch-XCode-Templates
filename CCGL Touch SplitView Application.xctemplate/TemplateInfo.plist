@@ -35,6 +35,8 @@
 		<dict>
 			<key>Frameworks</key>
 			<array>
+				<string>MobileCoreServices</string>
+				<string>ImageIO</string>
 				<string>UIKit</string>
 				<string>Foundation</string>
 				<string>CoreGraphics</string>
@@ -49,9 +51,13 @@
            <key>SharedSettings</key>
             <dict>
                 <key>ARCHS</key>
-                <string>$(ARCHS_STANDARD_32_BIT)</string>
+                <string>$(ARCHS_UNIVERSAL_IPHONE_OS)</string>
                 <key>GCC_VERSION</key>
-                <string>com.apple.compilers.llvmgcc42</string>
+                <string>com.apple.compilers.llvm.clang.1_0</string>
+                <key>CLANG_CXX_LANGUAGE_STANDARD</key>
+                <string>c++11</string>
+                <key>CLANG_CXX_LIBRARY</key>
+                <string>libc++</string>
                 <key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
                 <string>YES</string>
                 <key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
@@ -74,14 +80,14 @@
                     <key>ONLY_ACTIVE_ARCH</key>
                     <string>YES</string>
                     <key>OTHER_LDFLAGS</key>
-                    <string>/usr/lib/libz.dylib $(CINDER_PATH)/lib/libcinder-iphone_d.a $(CINDER_PATH)/lib/libcinder-iphone-sim_d.a</string>
+                    <string>$(CINDER_PATH)/lib/libcinder-iphone_d.a -lz $(CINDER_PATH)/lib/libcinder-iphone-sim_d.a -lz</string>
                 </dict>
                 <key>Release</key>
                 <dict>
                     <key>DEBUG_INFORMATION_FORMAT</key>
                     <string>dwarf-with-dsym</string>
                     <key>OTHER_LDFLAGS</key>
-                    <string>/usr/lib/libz.dylib $(CINDER_PATH)/lib/libcinder-iphone.a $(CINDER_PATH)/lib/libcinder-iphone-sim.a</string>
+                    <string>$(CINDER_PATH)/lib/libcinder-iphone.a -lz $(CINDER_PATH)/lib/libcinder-iphone-sim.a -lz</string>
                 </dict>
             </dict>
 		</dict>
